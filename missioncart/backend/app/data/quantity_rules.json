@@ -1,0 +1,92 @@
+{
+  "plates": {
+    "formula": "headcount * 2.0 * 1.10",
+    "pack_divide": true,
+    "explanation": "{units} plates — 2 per person × {headcount} guests with 10% buffer"
+  },
+  "cups": {
+    "formula": "headcount * 2.5 * 1.10",
+    "pack_divide": true,
+    "explanation": "{units} cups — drinks are consumed multiple times per guest"
+  },
+  "napkins": {
+    "formula": "headcount * 3.0 * 1.15",
+    "pack_divide": true,
+    "explanation": "{units} napkins — high usage item with 15% buffer"
+  },
+  "balloons": {
+    "formula": "headcount * 3.0 * 1.20",
+    "pack_divide": true,
+    "explanation": "{units} balloons — some pop before use, 20% buffer"
+  },
+  "candles": {
+    "formula": "1",
+    "pack_divide": false,
+    "explanation": "1 pack of candles"
+  },
+  "return_gifts": {
+    "formula": "headcount * 1.0 * 1.05",
+    "pack_divide": true,
+    "explanation": "{units} return gifts — 1 per child with small buffer"
+  },
+  "diapers_newborn": {
+    "formula": "days * 10 * 1.10",
+    "pack_divide": true,
+    "explanation": "{units} diapers — ~10 per day for newborn"
+  },
+  "dog_food_medium": {
+    "formula": "pet_weight_kg * 0.02 * days",
+    "pack_divide": true,
+    "explanation": "{units}g dog food — 2% of body weight per day"
+  },
+  "socks_travel": {
+    "formula": "days + 2",
+    "pack_divide": false,
+    "explanation": "{units} pairs — 1 per day plus 2 buffer"
+  },
+  "water_bottles": {
+    "formula": "headcount * 2.0",
+    "pack_divide": true,
+    "explanation": "{units} water bottles — 2 per person"
+  },
+  "snack_packets": {
+    "formula": "headcount * 1.5 * 1.10",
+    "pack_divide": true,
+    "explanation": "{units} snack packets — 1.5 per person with 10% buffer"
+  },
+  "juice_bottles": {
+    "formula": "headcount * 1.0 * 1.10",
+    "pack_divide": true,
+    "explanation": "{units} juice bottles — 1 per person with 10% buffer"
+  },
+  "trash_bags": {
+    "formula": "headcount * 0.5 * 1.20",
+    "pack_divide": true,
+    "explanation": "{units} trash bags — 1 per 2 guests with buffer"
+  },
+  "streamers": {
+    "formula": "3",
+    "pack_divide": false,
+    "explanation": "3 packs of streamers for decoration"
+  },
+  "tablecloth": {
+    "formula": "math.ceil(headcount / 8)",
+    "pack_divide": false,
+    "explanation": "{units} tablecloths — 1 per table of 8"
+  },
+  "towels": {
+    "formula": "headcount * 1.0",
+    "pack_divide": true,
+    "explanation": "{units} towels — 1 per person"
+  },
+  "led_bulbs": {
+    "formula": "4",
+    "pack_divide": false,
+    "explanation": "4 LED bulbs for basic room lighting"
+  },
+  "spoons_forks": {
+    "formula": "headcount * 2.0 * 1.10",
+    "pack_divide": true,
+    "explanation": "{units} cutlery pieces — 2 per person with buffer"
+  }
+}

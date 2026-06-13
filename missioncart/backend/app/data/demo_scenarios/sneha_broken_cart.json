@@ -1,0 +1,95 @@
+{
+  "goal": "Birthday party for 12 kids tomorrow evening under 4000",
+  "existing_cart": [
+    {
+      "asin": "DEMO_PLATES_01",
+      "title": "Disposable Paper Plates (Pack of 12)",
+      "price": 89,
+      "quantity": 1,
+      "category": "plates",
+      "pack_size": 12,
+      "prime": true,
+      "amazon_now_eligible": true,
+      "delivery_eta": "now_20min",
+      "rating": 4.1,
+      "return_risk": 0.05,
+      "safety_tags": ["child_safe", "food_grade"],
+      "sponsored": false
+    },
+    {
+      "asin": "DEMO_BALLOONS_01",
+      "title": "Multicolor Balloon Set Pack of 20 — Pump Not Included",
+      "price": 249,
+      "quantity": 1,
+      "category": "balloon_set",
+      "pack_size": 20,
+      "prime": true,
+      "amazon_now_eligible": true,
+      "delivery_eta": "now_20min",
+      "rating": 4.3,
+      "return_risk": 0.08,
+      "safety_tags": ["child_safe"],
+      "sponsored": false
+    },
+    {
+      "asin": "DEMO_STREAMERS_01",
+      "title": "Decorative Paper Streamers Multicolor Set of 6",
+      "price": 180,
+      "quantity": 1,
+      "category": "decoration_streamers",
+      "pack_size": 6,
+      "prime": false,
+      "amazon_now_eligible": false,
+      "delivery_eta": "2_days",
+      "rating": 4.0,
+      "return_risk": 0.10,
+      "safety_tags": ["child_safe"],
+      "sponsored": false
+    },
+    {
+      "asin": "DEMO_CUPS_SPONSORED",
+      "title": "Disposable Cups Pack of 25",
+      "price": 129,
+      "quantity": 1,
+      "category": "disposable_cups",
+      "pack_size": 25,
+      "prime": true,
+      "amazon_now_eligible": true,
+      "delivery_eta": "now_20min",
+      "rating": 3.8,
+      "return_risk": 0.06,
+      "safety_tags": [],
+      "sponsored": true
+    }
+  ],
+  "expected_flags": [
+    {
+      "type": "quantity_error",
+      "item_asin": "DEMO_PLATES_01",
+      "title": "12 plates — you need 24",
+      "math_explanation": "2 plates per child × 12 kids = 24 plates. Packs of 12 → 2 packs needed.",
+      "delay_ms": 1500
+    },
+    {
+      "type": "missing_accessory",
+      "item_asin": "DEMO_BALLOONS_01",
+      "title": "Balloon set — no pump in cart",
+      "math_explanation": "This balloon set requires a pump to inflate. No pump found in your cart.",
+      "delay_ms": 3000
+    },
+    {
+      "type": "not_amazon_now",
+      "item_asin": "DEMO_STREAMERS_01",
+      "title": "Streamers not on Amazon Now — swapping",
+      "math_explanation": "These streamers arrive in 2 days. Party is tomorrow. Swapped to Now-eligible alternative.",
+      "delay_ms": 4500
+    },
+    {
+      "type": "sponsored_blocked",
+      "item_asin": "DEMO_CUPS_SPONSORED",
+      "title": "Sponsored product blocked — failed child safe check",
+      "math_explanation": "This sponsored product does not have the child_safe certification required for a kids party mission.",
+      "delay_ms": 6000
+    }
+  ]
+}
